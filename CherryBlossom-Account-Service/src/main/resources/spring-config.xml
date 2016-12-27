@@ -8,7 +8,8 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
-
+    <!-- 采用注释的方式配置bean -->
+    <context:annotation-config />
     <aop:aspectj-autoproxy/>
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
@@ -73,4 +74,6 @@
     </aop:config>
 
     <context:component-scan base-package="com.cherryblossom.provider." />
+
+    <import resource="classpath:spring-dubbo-provider.xml" />
 </beans>

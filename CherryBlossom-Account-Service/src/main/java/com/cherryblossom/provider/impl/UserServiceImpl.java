@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.cherryblossom.mapper.UserMapper;
 import com.cherryblossom.model.User;
 import com.cherryblossom.provider.UserService;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,7 +12,7 @@ import java.util.List;
 /**
  * Created by nieqiurong on 2016/11/20.
  */
-@Service
+@Component("userService")
 public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements UserService {
 
     public void testTransaction(User user) {
