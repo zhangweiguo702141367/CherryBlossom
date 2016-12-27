@@ -1,28 +1,25 @@
-package com.cherryblossom.baomidou.model;
+package com.cherryblossom.model;
 
-
-
-import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
 
 import java.io.Serializable;
 
 /**
- * Created by nieqiurong on 2016/11/20.
+ * Created by nieqiurong on 2016/12/12.
  */
-@TableName(value = "t_user")
-public class User implements Serializable {
-    @TableId
-    private Long userId;
+@TableName(value = "t_phone")
+public class Phone extends Model<Phone> {
+    private Long id;
     private String userName;
     private Integer age;
 
-    public Long getUserId() {
-        return userId;
+    public Long getId() {
+        return id;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getUserName() {
@@ -41,28 +38,29 @@ public class User implements Serializable {
         this.age = age;
     }
 
-    public User() {
+    @Override
+    protected Serializable pkVal() {
+        return id;
     }
 
-    public User(String userName, Integer age) {
+    public Phone() {
+    }
+
+    public Phone(String userName, Integer age) {
         this.userName = userName;
         this.age = age;
     }
 
-    public User(Long userId, String userName, Integer age) {
-        this.userId = userId;
+    public Phone(Long id, String userName, Integer age) {
+        this.id = id;
         this.userName = userName;
         this.age = age;
-    }
-
-    public User(Long userId) {
-        this.userId = userId;
     }
 
     @Override
     public String toString() {
-        return "User{" +
-                "userId=" + userId +
+        return "Phone{" +
+                "id=" + id +
                 ", userName='" + userName + '\'' +
                 ", age=" + age +
                 '}';

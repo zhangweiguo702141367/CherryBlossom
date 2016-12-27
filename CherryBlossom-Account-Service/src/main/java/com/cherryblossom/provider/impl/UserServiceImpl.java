@@ -1,9 +1,9 @@
-package com.cherryblossom.baomidou.service.impl;
+package com.cherryblossom.provider.impl;
 
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.cherryblossom.baomidou.mapper.UserMapper;
-import com.cherryblossom.baomidou.model.User;
-import com.cherryblossom.baomidou.service.UserService;
+import com.cherryblossom.mapper.UserMapper;
+import com.cherryblossom.model.User;
+import com.cherryblossom.provider.UserService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

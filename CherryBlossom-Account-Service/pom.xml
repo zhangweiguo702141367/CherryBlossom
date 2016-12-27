@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>CherryBlossom-parent</artifactId>
+        <groupId>com.xiaoyin</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../CherryBlossom-parent/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>CherryBlossom-Account-Service</artifactId>
+    <packaging>war</packaging>
+    <name>CherryBlossom-Account-Service Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+    <dependencies>
+        <dependency>
+            <groupId>com.xiaoyin</groupId>
+            <artifactId>CherryBlossom-Account-API</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>CherryBlossom-Account-Service</finalName>
+    </build>
+</project>

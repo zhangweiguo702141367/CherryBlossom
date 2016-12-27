@@ -1,7 +1,7 @@
-package com.cherryblossom.baomidou.mapper;
+package com.cherryblossom.mapper;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
-import com.cherryblossom.baomidou.model.User;
+import com.cherryblossom.model.User;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;

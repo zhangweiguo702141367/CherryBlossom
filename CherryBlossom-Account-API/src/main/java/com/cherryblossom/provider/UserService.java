@@ -1,7 +1,8 @@
-package com.cherryblossom.baomidou.service;
+package com.cherryblossom.provider;
+
 
 import com.baomidou.mybatisplus.service.IService;
-import com.cherryblossom.baomidou.model.User;
+import com.cherryblossom.model.User;
 
 import java.util.List;
 

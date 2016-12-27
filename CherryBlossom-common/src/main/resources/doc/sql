@@ -1,0 +1,45 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : mysql_master
+Source Server Version : 50634
+Source Host           : 192.168.220.141:3306
+Source Database       : cb_member
+
+Target Server Type    : MYSQL
+Target Server Version : 50634
+File Encoding         : 65001
+
+Date: 2016-12-27 14:43:01
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `cb_member`
+-- ----------------------------
+DROP TABLE IF EXISTS `cb_member`;
+CREATE TABLE `cb_member` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '用户主键',
+  `name` varchar(32) NOT NULL COMMENT '昵称',
+  `phone` varchar(11) NOT NULL COMMENT '手机号',
+  `is_phone` tinyint(2) NOT NULL DEFAULT '-1' COMMENT '1已认证、-1未认证',
+  `email` varchar(32) DEFAULT NULL COMMENT '用户邮箱',
+  `is_email` tinyint(2) NOT NULL DEFAULT '-1' COMMENT '1已认证、-1未认证',
+  `pwd_attach` varchar(50) NOT NULL COMMENT '加密盐',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '-2登录锁定、-1管理员锁定、1正常',
+  `lock_time` bigint(13) DEFAULT NULL COMMENT '锁定时间',
+  `password` char(32) NOT NULL COMMENT '用户登录密码',
+  `count` mediumint(8) NOT NULL DEFAULT '1' COMMENT '登录次数',
+  `register_ip` int(11) NOT NULL COMMENT '注册ip',
+  `register_time` bigint(13) NOT NULL COMMENT '注册时间',
+  `register_date` date NOT NULL COMMENT '注册日期y-m-d',
+  `lastlogin_ip` int(11) NOT NULL COMMENT '登录ip',
+  `lastlogin_time` bigint(11) NOT NULL COMMENT '最后一次登录时间',
+  `lastlogin_date` date NOT NULL COMMENT '最后登录日期y-m-d',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of cb_member
+-- ----------------------------
